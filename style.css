@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_container{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo small{
+    font-size: 13px;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+
+.menu a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: #76323f;
+    transition: .3s ease-in-out;
+}
+
+.menu a:hover{
+    color: #76323f;
+}
+.menu a:hover::before{
+    width: 100%;
+}
+
+
+.hero_section{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(-500deg, #d7cec7, #c09f80);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hero_section img{
+    height: 450px;
+}
+
+.hero_section .desc{
+    width: 50%;
+}
+
+.hero_section .desc h1{
+    font-size: 60px;
+    color: #76323f;
+}
+
+.hero_section .desc p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #222;
+    font-weight: 600;
+}
+
+.hero_section .desc button{
+    width: 40%;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    background-color: #76323f;
+    border: 1px solid #76323f;
+    box-shadow: 0 10px 20px #76323f;
+    animation-name: btn_animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btn_animation{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.about .logo{
+    transform: scale(4);
+}
+
+.about .text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .text h2, .services h2, .plans_container h2{
+    font-weight: 700;
+    position: relative;
+    font-size: 50px;
+    display: inline;
+}
+
+.about .text h2::before, .services h2::before, .plans_container h2::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    left: 25%;
+    bottom: -5px;
+    background-color: #76323f;
+}
+
+.about .text p{
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    color: #c09f80;
+    text-align: justify;
+}
+
+.services{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: linear-gradient(20deg, #d7cec7, #c09f80);
+    padding: 20px;
+}
+
+.items{
+    display: grid;
+    grid-template-areas: 
+    "a1 a1 a2 a2"
+    "a1 a1 a3 a3";
+    gap: 20px;
+}
+
+.item1{
+    grid-area: a1;
+}
+.item2{
+    grid-area: a2;
+}
+
+.item3{
+    grid-area: a3;
+}
+.item{
+    background-color: #333;
+    position: relative;
+    min-height: 250px;
+    width: 600px;
+    border-radius: 20px;
+}
+
+.item img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+
+.item .describe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item .describe h4{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.item .describe p{
+    text-align: justify;
+    width: 70%;
+    font-size: 17px;
+}
+
+.plans_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    color: #333;
+}
+
+.plans_container h2{
+    color: #333;
+    margin-top: 20px;
+}
+
+.plans_container h2::before{
+    background-color: #333;
+}
+
+
+.plans{
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.plan{
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 22px;
+    box-shadow: 0 10px 40px #ddd;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.plan h5{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.plan small{
+    display: flex;
+    gap: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 100px;
+}
+
+.services_midias{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.services_footer li{
+    margin-bottom: 10px;
+}
+
+.follow{
+    width: 40%;
+}
+
+.follow h5, .services_footer h5{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.follow p{
+    font-size: 17px;
+}
+
+.follow i{
+    font-size: 30px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    width: 90%;
+}
+
+.contact .text{
+    font-size: 20px;
+}
+
+.end{
+    width: 100%;
+    text-align: center;
+    align-self: flex-end;
+    margin-top: 50px;
+}
